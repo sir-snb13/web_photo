@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Фотостудия Maximov</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Кнопка для перехода на главную страницу -->
+        <div class="back-to-home">
+            <a href="index.html">На главную страницу</a>
+        </div>
+
+        <section id="contact-form">
+            <h2>Обратная связь</h2>
+            <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <p>Откуда узнали о нас?</p>
+                <label><input type="radio" name="source" value="internet" required> Интернет</label>
+                <label><input type="radio" name="source" value="friend"> От друзей</label>
+                <label><input type="radio" name="source" value="advertisement"> Реклама</label>
+
+                <label for="type">Тип обращения:</label>
+                <select id="type" name="type">
+                    <option value="complaint">Жалоба</option>
+                    <option value="suggestion">Предложение</option>
+                </select>
+
+                <label for="message">Текст сообщения:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label for="file">Вложения:</label>
+                <input type="file" id="file" name="file">
+
+                <label>
+                    <input type="checkbox" id="consent" name="consent" required> Даю согласие на обработку персональных данных
+                </label>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Фотостудия Maximov. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Фотостудия Maximov</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="auth.css">
+    </head>
+    <body>
+        <header>
+            <h1>Фотостудия Maximov</h1>
+        </header>
+        <main>
+            <div class="background-image"></div>
+            <div class="auth-container" >
+                <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data" class="auth-form">
+                    <h2>Аутентификация</h2>
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" name="login" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label class="remember">
+                        <input type="checkbox" name="remember"> Запомнить меня
+                    </label>
+                    <button type="submit">Войти</button>
+            </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
